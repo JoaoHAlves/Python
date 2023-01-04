@@ -1,0 +1,45 @@
+import mysql.connector
+
+# CONECTAR COM O BANCO DE DADOS
+con = mysql.connector.connect(
+    host='localhost',
+    user='root',
+    password='SUA SENHA',
+    database='SEU BANCO DE DADOS')
+###############################
+
+cursor = con.cursor()
+
+# CRUD
+# CREATE
+# nome_produto = "CocaCola"
+# valor = 8
+# comando = f'INSERT INTO vendas (nome_produto, valor) VALUES ("{nome_produto}", {valor})'
+# cursor.execute(comando)
+# con.commit() # EDITA O BANCO DE DADOS
+
+# READ
+# ler = f'SELECT * FROM vendas'
+# cursor.execute(ler)
+# resultado = cursor.fetchall()
+# print(resultado)
+
+# UPDATE
+# nome_produto = "Chocolate"
+# valor = 6
+# atualizar = f'UPDATE vendas SET valor = {valor} WHERE nome_produto = "{nome_produto}"'
+# cursor.execute(atualizar)
+# con.commit()
+
+# DELETE
+# nome_produto = "Chocolate"
+# deletar = f'DELETE FROM vendas WHERE nome_produto = "{nome_produto}"'
+# cursor.execute(deletar)
+# con.commit()
+
+
+
+
+
+cursor.close()
+con.close()
